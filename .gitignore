@@ -1,0 +1,9 @@
+__pycache__
+datasets_local
+faiss_hp_index
+corpus
+qwen3-4b-hp-assistant-adapter
+qwen3-4b-hp-reward-model
+results_hp_assistant
+reward_model_results
+temp_merged_sft_model

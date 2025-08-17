@@ -1,0 +1,33 @@
+/* Import a magical-looking font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Style the main app container */
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://www.transparenttextures.com/patterns/old-paper.png");
+    background-color: #F5E8C7; /* A parchment-like color */
+}
+
+/* Style the chat bubbles */
+[data-testid="stChatMessage"] {
+    background-color: rgba(193, 172, 148, 0.6); /* Semi-transparent brown */
+    border-radius: 10px;
+    border: 1px solid #6D4C41;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Style the main app text and font */
+.main .block-container {
+    font-family: 'MedievalSharp', cursive;
+    color: #3E2723; /* Dark, earthy brown text */
+}
+
+/* Style the title */
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 4px #aaa;
+}
+
+/* Style the input box */
+[data-testid="stChatInput"] {
+    background-color: #E6D5B8;
+}
