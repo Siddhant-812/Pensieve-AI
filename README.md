@@ -1,4 +1,5 @@
-#🧙‍♂️ Pensieve AI: An Aligned Conversational RAG Agent
+# 🧙‍♂️ Pensieve AI: An Aligned Conversational RAG Agent
+
 Pensieve AI is an end-to-end conversational agent designed to answer questions about the Harry Potter universe with high fidelity. This project demonstrates a complete MLOps workflow, including advanced model fine-tuning (SFT, DPO/RLHF), Retrieval-Augmented Generation (RAG) for contextual accuracy, and a human-in-the-loop data collection system deployed with a themed Streamlit UI.
 
 ### ✨ Features
