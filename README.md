@@ -1,7 +1,7 @@
-🧙‍♂️ Pensieve AI: An Aligned Conversational RAG Agent
+#🧙‍♂️ Pensieve AI: An Aligned Conversational RAG Agent
 Pensieve AI is an end-to-end conversational agent designed to answer questions about the Harry Potter universe with high fidelity. This project demonstrates a complete MLOps workflow, including advanced model fine-tuning (SFT, DPO/RLHF), Retrieval-Augmented Generation (RAG) for contextual accuracy, and a human-in-the-loop data collection system deployed with a themed Streamlit UI.
 
-✨ Features
+### ✨ Features
 Retrieval-Augmented Generation (RAG): The model's knowledge is grounded in the source text of the Harry Potter books, preventing hallucinations and ensuring answers are factually accurate.
 
 Supervised Fine-Tuning (SFT): The base Qwen/Qwen3-4B-Instruct-2507 model is fine-tuned on a multi-domain dataset to enhance its conversational and reasoning abilities.
@@ -22,7 +22,7 @@ Efficient Inference: The final model is a 4-bit quantized PEFT adapter, ensuring
 <img width="981" height="890" alt="bot-4" src="https://github.com/user-attachments/assets/17da38e8-53e4-4e90-b824-52b66d127121" />
 
 
-🛠️ Tech Stack
+### 🛠️ Tech Stack
 LLM: Qwen/Qwen3-4B-Instruct-2507
 
 Fine-Tuning & Alignment: Hugging Face transformers, peft (QLoRA), trl (SFTTrainer, DPOTrainer)
@@ -39,7 +39,7 @@ Deployment & UI: streamlit, streamlit-lottie
 
 Core Libraries: PyTorch, accelerate, bitsandbytes
 
-🏗️ Project Architecture
+### 🏗️ Project Architecture
 The project is divided into two main phases: an offline training pipeline and an online inference application.
 
 Offline Training Pipeline:
@@ -58,7 +58,7 @@ The model generates a response based on the user's query and the retrieved conte
 
 The app periodically prompts the user for feedback on generated responses, saving their preferences to a log file to be used in the next iteration of the offline training pipeline.
 
-🚀 Setup and Installation
+### 🚀 Setup and Installation
 Clone the repository:
 
 Bash
@@ -79,7 +79,7 @@ Place your Harry Potter PDF file in the root directory and name it harry_potter_
 
 Place your DPO preference dataset in the root directory and name it preference_data.jsonl.
 
-⚙️ Usage
+### ⚙️ Usage
 The project is split into several scripts representing the different stages of the MLOps lifecycle.
 
 1. Supervised Fine-Tuning (SFT)
@@ -87,7 +87,6 @@ This is the first training stage to improve the base model's general capabilitie
 
 Bash
 
-# (Assuming you have a train_sft.py script)
 CUDA_VISIBLE_DEVICES=0 python train_sft.py
 This will produce the qwen3-4b-hp-assistant-adapter.
 
@@ -96,7 +95,6 @@ This stage aligns the SFT model with your preference data.
 
 Bash
 
-# This uses your SFT adapter and preference data
 CUDA_VISIBLE_DEVICES=0 python train_dpo.py
 This will produce the final qwen3-4b-hp-dpo-adapter.
 
